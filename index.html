@@ -767,8 +767,20 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-page="page-6" onclick="navigateToPage(6)">
-                        📱 Instahub Konto
+                        🧩 SQL & Instahub Praxis
                     </a>
+                    <ul class="nav-submenu">
+                        <li class="nav-item">
+                            <a class="nav-link" data-page="page-7" onclick="navigateToPage(7)">
+                                📱 Instahub Konto
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-page="page-8" onclick="navigateToPage(8)">
+                                🤝 Kennenlernen Instahub
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </aside>
@@ -1112,6 +1124,16 @@
 
                         <div class="image-container">
                             <img src="images/resources/Screenshot_2026-03-25_2150021.png" alt="Datendarstellung - Variante 1" onclick="zoomImage(this)" style="max-width: 100%;">
+                        </div>
+
+                        <h2>SQL in der Praxis</h2>
+
+                        <p>In einer relationalen Datenbank werden Daten nicht nur gespeichert, sondern auch mit SQL abgefragt und verändert. Schau dir dazu dieses Video an:</p>
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin-bottom: 20px;">
+                            <iframe src="https://www.youtube.com/embed/2goPVJOvJVY" title="SQL Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                        </div>
+                        <div style="padding: 18px; background: rgba(255, 255, 255, 0.06); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 20px;">
+                            <p style="color: var(--text-dark); margin: 0;"><strong>Praktische Anwendung:</strong> Nutze Instahub als Modellumgebung, um SQL-Abfragen auf deine Tabellen anzuwenden. Dort kannst du SQL direkt testen, Daten filtern und Beziehungen zwischen Tabellen nachvollziehen.</p>
                         </div>
 
                         <h2>Aufgabe: Datendarstellung analysieren</h2>
@@ -1611,17 +1633,59 @@
                     </div>
                 </div>
 
-                <!-- Page 6: Instahub Konto erstellen -->
+                <!-- Page 6: SQL & Instahub Praxis -->
                 <div id="page-6" class="page">
                     <div class="page-content">
+                        <h1>SQL & Instahub Praxis</h1>
+                        <p style="color: var(--text-light); margin-bottom: 20px;">Lerne, wie SQL in der Praxis arbeitet und wie du Instahub als Modellumgebung nutzen kannst, um Datenbankabfragen zu testen.</p>
+
+                        <div style="padding: 18px; background: rgba(255, 255, 255, 0.06); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 20px;">
+                            <p style="color: var(--text-dark); margin: 0;"><strong>Was ist Instahub?</strong> Instahub ist eine Lernplattform, die speziell dafür entwickelt wurde, Schülerinnen und Schüler beim Lernen zu unterstützen – ähnlich wie soziale Medien, aber mit einem klaren Bildungsfokus. Inhalte werden dort in kurzen, verständlichen Beiträgen („Posts“) präsentiert. Diese können Texte, Bilder, kurze Videos oder interaktive Aufgaben enthalten. Ziel ist es, Lernen moderner, anschaulicher und näher an der Lebenswelt von Jugendlichen zu gestalten.</p>
+                        </div>
+
+                        <p>In relationalen Datenbanken werden Daten mit SQL abgefragt, verändert und ausgewertet. Schau dir dazu dieses Video an:</p>
+                        <a href="https://www.youtube.com/watch?v=2goPVJOvJVY" target="_blank" rel="noreferrer noopener" class="btn btn-primary" style="display: inline-block; margin-bottom: 20px;">
+                            ▶️ SQL-Video ansehen
+                        </a>
+
+                        <div style="padding: 18px; background: rgba(255, 255, 255, 0.06); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 20px;">
+                            <p style="color: var(--text-dark); margin: 0;"><strong>Praktische Anwendung:</strong> Nutze Instahub als Modellumgebung, um SQL-Abfragen auf deine Tabellen anzuwenden. Dort kannst du SQL direkt testen, Daten filtern und Beziehungen zwischen Tabellen nachvollziehen.</p>
+                        </div>
+
+                        <div class="nav-buttons">
+                            <button class="btn btn-primary" onclick="navigateToPage(5)">← Zurück zu ER-Modelle</button>
+                            <button class="btn btn-primary" onclick="navigateToPage(7)">Weiter zu Instahub Konto →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 8: Kennenlernen Instahub -->
+                <div id="page-8" class="page">
+                    <div class="page-content">
+                        <h1>Kennenlernen Instahub</h1>
+                        <p style="color: var(--text-light); margin-bottom: 20px;">Macht euch eigenständig mit der Oberfläche von InstaHub vertraut, indem ihr die Plattform erkundet und verschiedene Funktionen ausprobiert. Achtet dabei besonders darauf, wie die Inhalte aufgebaut sind und welche Elemente immer wieder vorkommen, wie zum Beispiel Nutzerprofile, Beiträge, Kommentare oder Likes.</p>
+                        <p style="color: var(--text-light); margin-bottom: 20px;">Überlegt im nächsten Schritt, welche Daten hinter diesen sichtbaren Elementen stehen könnten. Betrachtet dazu typische Bestandteile genauer: Welche Informationen gehören zu einem Nutzer? Welche Merkmale hat ein Beitrag? Welche Rolle spielen Kommentare oder Interaktionen?</p>
+                        <p style="color: var(--text-light); margin-bottom: 20px;">Analysiert anschließend, wie diese einzelnen Elemente miteinander in Beziehung stehen. Fragt euch zum Beispiel: Wer erstellt Beiträge? Wie sind Kommentare mit Beiträgen verknüpft? Können Nutzer miteinander interagieren?</p>
+                        <p style="color: var(--text-light); margin-bottom: 20px;">Erstellt auf Grundlage eurer Beobachtungen ein Entity-Relationship-Modell (ER-Modell), das die Struktur von InstaHub vereinfacht darstellt.</p>
+                        <div class="nav-buttons">
+                            <button class="btn btn-primary" onclick="navigateToPage(7)">← Zurück zu Instahub Konto</button>
+                            <button class="btn btn-primary" onclick="navigateToPage(0)">🏠 Zur Startseite</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 7: Instahub Konto erstellen -->
+                <div id="page-7" class="page">
+                    <div class="page-content">
                         <h1>Instahub: Konto erstellen</h1>
-                        <p style="color: var(--text-light); margin-bottom: 20px;">Hier lernst du, wie du bei Instahub ein neues Benutzerkonto anlegst. Öffne dazu die Webseite <a href="https://instahub.org" target="_blank" rel="noreferrer noopener" style="color: var(--link-color);">instahub.org</a> und nutze das unten gezeigte Formularbild als Vorlage.</p>
+                        <p style="color: var(--text-light); margin-bottom: 20px;">Erstelle deinen eigenen Insta-Hub. Gehe dazu auf die Webseite <a href="https://instahub.org" target="_blank" rel="noreferrer noopener" style="color: var(--link-color);">instahub.org</a>, wähle die Rolle <strong>Schüler</strong> aus und folge der Anleitung.</p>
 
                         <div style="padding: 18px; background: rgba(255, 255, 255, 0.06); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 20px;">
                             <h2>Wichtige Schritte</h2>
                             <ol style="color: var(--text-light); padding-left: 18px; margin-top: 10px;">
                                 <li>Der Benutzername muss <strong>admin</strong> lauten.</li>
                                 <li>Gib deine E-Mail-Adresse ein.</li>
+                                <li>Übernehme den <strong>Lehrernamen</strong> unbedingt genau so, wie er auf dem Bild angezeigt wird.</li>
                                 <li>Erstelle ein starkes Passwort und bestätige es.</li>
                                 <li>Merke dir neben dem Passwort unbedingt auch den <strong>Hub-Namen</strong>.</li>
                                 <li>Stimme den Nutzungsbedingungen zu.</li>
@@ -1636,8 +1700,8 @@
                         </div>
 
                         <div class="nav-buttons">
-                            <button class="btn btn-primary" onclick="navigateToPage(5)">← Zurück zu ER-Modelle</button>
-                            <button class="btn btn-secondary" onclick="navigateToPage(0)">🏠 Zur Startseite</button>
+                            <button class="btn btn-primary" onclick="navigateToPage(6)">← Zurück zu SQL & Instahub Praxis</button>
+                            <button class="btn btn-primary" onclick="navigateToPage(8)">Weiter zu Kennenlernen Instahub →</button>
                         </div>
                     </div>
                 </div>
@@ -1691,7 +1755,9 @@
                 5.5: 'page-5b',
                 5.7: 'page-5c',
                 5.9: 'page-5d',
-                6: 'page-6'
+                6: 'page-6',
+                7: 'page-7',
+                8: 'page-8'
             };
             
             const pageId = pageMap[pageIndex];

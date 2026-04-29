@@ -710,14 +710,6 @@
                 <img src="images/Logo.png" alt="Logo">
             </div>
 
-            <div class="progress-section">
-                <div class="progress-title">Fortschritt</div>
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progressFill"></div>
-                </div>
-                <div class="progress-text"><span id="progressPoints">0</span>/<span id="progressMax">45</span> Punkte</div>
-            </div>
-
             <ul class="nav-menu" id="navMenu">
                 <li class="nav-item">
                     <a class="nav-link active" data-page="page-0" onclick="navigateToPage(0)">
@@ -772,6 +764,11 @@
                             </a>
                         </li>
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-page="page-6" onclick="navigateToPage(6)">
+                        📱 Instahub Konto
+                    </a>
                 </li>
             </ul>
         </aside>
@@ -1614,6 +1611,37 @@
                     </div>
                 </div>
 
+                <!-- Page 6: Instahub Konto erstellen -->
+                <div id="page-6" class="page">
+                    <div class="page-content">
+                        <h1>Instahub: Konto erstellen</h1>
+                        <p style="color: var(--text-light); margin-bottom: 20px;">Hier lernst du, wie du bei Instahub ein neues Benutzerkonto anlegst. Öffne dazu die Webseite <a href="https://instahub.org" target="_blank" rel="noreferrer noopener" style="color: var(--link-color);">instahub.org</a> und nutze das unten gezeigte Formularbild als Vorlage.</p>
+
+                        <div style="padding: 18px; background: rgba(255, 255, 255, 0.06); border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 20px;">
+                            <h2>Wichtige Schritte</h2>
+                            <ol style="color: var(--text-light); padding-left: 18px; margin-top: 10px;">
+                                <li>Der Benutzername muss <strong>admin</strong> lauten.</li>
+                                <li>Gib deine E-Mail-Adresse ein.</li>
+                                <li>Erstelle ein starkes Passwort und bestätige es.</li>
+                                <li>Merke dir neben dem Passwort unbedingt auch den <strong>Hub-Namen</strong>.</li>
+                                <li>Stimme den Nutzungsbedingungen zu.</li>
+                                <li>Klicke auf <strong>Registrieren</strong> oder <strong>Account erstellen</strong>.</li>
+                            </ol>
+                        </div>
+
+                        <img src="images/resources/instahub_Anmeldung.png" alt="Instahub Anmeldung" style="width:100%; max-width:720px; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,0.16); margin-bottom: 25px;">
+
+                        <div style="padding: 18px; background: rgba(12, 192, 223, 0.1); border-radius: 10px; border: 1px solid var(--border-color); margin-bottom: 20px;">
+                            <p style="color: var(--text-dark); margin: 0;"><strong>Hinweis:</strong> Achte darauf, ein Passwort zu wählen, das Buchstaben, Zahlen und Sonderzeichen enthält. Verwende nicht dasselbe Passwort wie für andere Konten. Merke dir unbedingt auch den Hub-Namen.</p>
+                        </div>
+
+                        <div class="nav-buttons">
+                            <button class="btn btn-primary" onclick="navigateToPage(5)">← Zurück zu ER-Modelle</button>
+                            <button class="btn btn-secondary" onclick="navigateToPage(0)">🏠 Zur Startseite</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </main>
     </div>
@@ -1662,7 +1690,8 @@
                 5: 'page-5',
                 5.5: 'page-5b',
                 5.7: 'page-5c',
-                5.9: 'page-5d'
+                5.9: 'page-5d',
+                6: 'page-6'
             };
             
             const pageId = pageMap[pageIndex];
@@ -2217,9 +2246,13 @@
             const maxScore = 45;
             const percentage = (totalScore / maxScore) * 100;
             
-            document.getElementById('progressFill').style.width = percentage + '%';
-            document.getElementById('progressPoints').textContent = totalScore;
-            document.getElementById('progressMax').textContent = maxScore;
+            const progressFill = document.getElementById('progressFill');
+            const progressPoints = document.getElementById('progressPoints');
+            const progressMax = document.getElementById('progressMax');
+
+            if (progressFill) progressFill.style.width = percentage + '%';
+            if (progressPoints) progressPoints.textContent = totalScore;
+            if (progressMax) progressMax.textContent = maxScore;
             
             saveProgress();
         }

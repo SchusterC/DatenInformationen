@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zusammenfassung: Aufgaben und Lösungen</title>
+    <style>
+        :root {
+            --primary-color: #a02020;
+            --secondary-color: #0cc0df;
+            --background: #0f172a;
+            --card-bg: #1f2937;
+            --border-color: #374151;
+            --text-color: #f4f4f4;
+            --text-light: #d1d5db;
+            --success-color: #22c55e;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #020617 0%, #101828 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+        }
+        h1, h2, h3 { color: #ffffff; }
+        h1 { margin-bottom: 10px; font-size: 2.2rem; }
+        h2 { margin-top: 40px; margin-bottom: 14px; }
+        p { margin: 12px 0; }
+        a { color: var(--secondary-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .intro { margin-bottom: 30px; padding: 20px; border-radius: 14px; background: rgba(15, 23, 42, 0.95); border: 1px solid var(--border-color); }
+        .card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 22px; margin: 18px 0; }
+        .solution { background: rgba(12, 192, 223, 0.08); border-left: 4px solid var(--secondary-color); padding: 18px; margin-top: 16px; }
+        .solution strong { color: #ffffff; }
+        .task-title { margin-bottom: 10px; font-size: 1.1rem; }
+        .task-text { margin-bottom: 16px; color: var(--text-light); }
+        .toc { list-style: none; padding-left: 0; margin-top: 10px; }
+        .toc li { margin: 10px 0; }
+        .toc a { color: var(--text-light); }
+        .toc a:hover { color: var(--secondary-color); }
+        .note { font-size: 0.95rem; color: var(--text-light); margin-top: 8px; }
+        .image-container { margin: 20px 0; text-align: center; }
+        .image-container img { max-width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--border-color); }
+        .back-link { display: inline-block; margin-top: 30px; padding: 12px 18px; border-radius: 999px; background: var(--primary-color); color: white; }
+        .back-link:hover { background: #c02c2c; }
+        .small { color: var(--text-light); font-size: 0.95rem; }
+
+        @media print {
+            body {
+                background: white !important;
+                color: #000 !important;
+            }
+
+            .intro,
+            .card,
+            .solution,
+            .image-container,
+            .back-link,
+            .small {
+                background: transparent !important;
+                color: #000 !important;
+                border-color: #000 !important;
+            }
+
+            .back-link,
+            button,
+            .toc,
+            .toc li,
+            .toc a {
+                display: none !important;
+            }
+
+            .page {
+                padding: 0 !important;
+            }
+
+            .page {
+                max-width: 100% !important;
+                margin: 0 !important;
+            }
+
+            a::after {
+                content: " (" attr(href) ")";
+                font-size: 90%;
+                color: #000;
+            }
+
+            @page {
+                size: A4;
+                margin: 20mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="intro">
+            <h1>Zusammenfassung: Alle Aufgaben mit Lösungen</h1>
+            <p>Diese Seite fasst die wichtigsten Aufgaben aus dem Lernmodul zusammen und zeigt die verfügbaren Musterlösungen.</p>
+            <p class="small">Wenn du die interaktive Version nutzen möchtest, öffne <a href="index.html">index.html</a>.</p>
+            <button class="back-link" onclick="printPage()" style="margin-top: 15px;">PDF herunterladen</button>
+        </header>
+
+        <section id="quiz" class="card">
+            <h2 class="task-title">1. Quiz: Grundbegriffe</h2>
+            <p class="task-text">Beantworte die beiden Fragen zum Unterschied zwischen Daten/Informationen und Datenstrukturen.</p>
+            <div class="solution">
+                <p><strong>🎯 Musterlösung:</strong></p>
+                <p><strong>Frage 1:</strong> Richtige Antwort ist <strong>b)</strong> - Daten sind einzelne Werte, Informationen entstehen durch Einordnung.</p>
+                <p><strong>Frage 2:</strong> Richtige Antwort ist <strong>a)</strong> - Lineare Struktur (Tabellen) wird am häufigsten verwendet.</p>
+            </div>
+        </section>
+
+        <section id="datenquellen" class="card">
+            <h2 class="task-title">2. Aufgabe: Datenquellen identifizieren</h2>
+            <p class="task-text">Notiere mindestens 10 Beispiele, bei denen Daten über dich gespeichert werden, z. B. soziale Netzwerke, Schule, Online-Shops oder Streaming-Dienste. Ergänze auch, welche Daten dort gespeichert werden.</p>
+            <div class="solution">
+                <p><strong>🎯 Musterlösung:</strong></p>
+                <ul style="margin: 12px 0 0 20px;">
+                    <li>Soziale Netzwerke: Name, Profilbild, Freundesliste, Posts</li>
+                    <li>Schule: Noten, Adresse, Geburtsdatum, Klassenstufe</li>
+                    <li>Online-Shops: Bestellungen, Zahlungsdaten, Lieferadresse</li>
+                    <li>Streaming-Dienste: Wiedergabeverlauf, Bewertungen, Abonnements</li>
+                    <li>Handy: Kontakte, Standort, Anrufliste</li>
+                    <li>E-Mail: Nachrichten, Kontakte, Anhänge</li>
+                    <li>Bank: Kontonummer, Transaktionen, Kreditkartendaten</li>
+                    <li>Versicherung: Versicherungsnummer, Vertragsdaten, Schadensfälle</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="barbie" class="card">
+            <h2 class="task-title">3. Aufgabe: Barbie-Welt analysieren</h2>
+            <p class="task-text">Erkläre, warum die Barbie-Welt nicht der Realität entspricht.</p>
+            <div class="solution">
+                <p><strong>🎯 Musterlösung:</strong></p>
+                <p>Die Barbie-Welt ist ein stark vereinfachtes und idealisiertes Modell der Wirklichkeit. Sie zeigt unrealistische Körperbilder und blendet viele reale Probleme wie Arbeit, Geld, soziale Ungleichheit oder Konflikte aus.</p>
+                <p>Die Darstellung wirkt perfekt und makellos, während unterschiedliche Lebensweisen, Körperformen und gesellschaftliche Hintergründe oft fehlen.</p>
+            </div>
+        </section>
+
+        <section id="modelle" class="card">
+            <h2 class="task-title">4. Übung: Modelle erkennen</h2>
+            <p class="task-text">Begründe, warum die folgenden Beispiele informatische Modelle sind.</p>
+
+            <h3>4a) Wettervorhersage</h3>
+            <div class="solution">
+                <p><strong>🎯 Musterlösung:</strong></p>
+                <ul style="margin: 12px 0 0 20px;">
+                    <li><strong>Abbildung der Realität:</strong> Reale Wetterprozesse wie Temperatur, Druck und Wind werden dargestellt.</li>
+                    <li><strong>Vereinfachung:</strong> Nur ausgewählte Messwerte und Modelle werden verwendet, nicht alle physikalischen Einflüsse.</li>
+                    <li><strong>Abstraktion:</strong> Komplexe Vorgänge werden auf wesentliche Daten reduziert.</li>
+                    <li><strong>Zweckorientierung:</strong> Ziel ist die Vorhersage des Wetters.</li>
+                    <li><strong>Grenzen:</strong> Vorhersagen sind nie exakt, da nicht alle Faktoren erfasst werden können.</li>
+                </ul>
+            </div>
+
+            <h3>4b) Videospiel</h3>
+            <div class="solution">
+                <p><strong>🎯 Musterlösung:</strong></p>
+                <ul style="margin: 12px 0 0 20px;">
+                    <li><strong>Abbildung der Realität:</strong> Bewegungen, Schwerkraft und Kollisionen orientieren sich an der realen Welt.</li>
+                    <li><strong>Vereinfachung:</strong> Physik und Regeln sind stark vereinfacht (z. B. Sprungkurven ohne realistische Reibung).</li>
+                    <li><strong>Abstraktion:</strong> Spielfiguren, Level und Objekte sind digitale Datenstrukturen.</li>
+                    <li><strong>Zweckorientierung:</strong> Ziel ist Unterhaltung oder Simulation.</li>
+                    <li><strong>Grenzen:</strong> Die Spielwelt ist künstlich und bildet die Realität nur teilweise ab.</li>
+                </ul>
+            </div>
+
+            <h3>4c) Augmented Reality</h3>
+            <div class="solution">
+                <p><strong>🎯 Musterlösung:</strong></p>
+                <ul style="margin: 12px 0 0 20px;">
+                    <li><strong>Abbildung der Realität:</strong> Die reale Umgebung wird digital ergänzt, z. B. mit eingeblendeten Objekten.</li>
+                    <li><strong>Vereinfachung:</strong> Die Umgebung wird nur teilweise erkannt, oft nur Flächen oder Marker.</li>
+                    <li><strong>Abstraktion:</strong> Die reale Welt wird durch Sensordaten und Modelle im System dargestellt.</li>
+                    <li><strong>Zweckorientierung:</strong> Einsatz in Navigation, Spielen oder Visualisierung.</li>
+                    <li><strong>Grenzen:</strong> Erkennung ist ungenau und digitale Objekte passen nicht immer perfekt zur Realität.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="datendarstellung" class="card">
+            <h2 class="task-title">5. Aufgabe: Datendarstellung analysieren</h2>
+            <p class="task-text">Beurteile zwei verschiedene Darstellungen und begründe, welche Darstellung vorzuziehen ist.</p>
+            <div class="solution">
+                <p><strong>🎯 Musterlösung:</strong></p>
+                <p>Variante 1 ist problematisch, weil sie unklare Struktur und mangelnde Einheitlichkeit aufweist. Variante 2 ist vorzuziehen, weil sie eine klare Tabellenstruktur und konsistente Formatierung verwendet.</p>
+                <p>Wichtige Punkte: Datentypen definieren, eindeutige Primärschlüssel verwenden und Redundanz vermeiden.</p>
+            </div>
+        </section>
+
+        <section id="lueckentext" class="card">
+            <h2 class="task-title">6. Aufgabe: ER-Modell Lückentext</h2>
+            <p class="task-text">Fülle die fehlenden Begriffe im Lückentext über ER-Modelle aus.</p>
+            <div class="solution">
+                <p><strong>🎯 Musterlösung:</strong></p>
+                <ul style="margin: 12px 0 0 20px;">
+                    <li><strong>gap1:</strong> Entität</li>
+                    <li><strong>gap2:</strong> Attribut</li>
+                    <li><strong>gap3:</strong> Primärschlüssel</li>
+                    <li><strong>gap4:</strong> Beziehung</li>
+                    <li><strong>gap5:</strong> 1:1</li>
+                    <li><strong>gap6:</strong> 1:n</li>
+                    <li><strong>gap7:</strong> m:n</li>
+                    <li><strong>gap8:</strong> 1:n</li>
+                    <li><strong>gap9:</strong> m:n</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="matching" class="card">
+            <h2 class="task-title">7. Matching-Übung: Datenbanksystem-Begriffe</h2>
+            <p class="task-text">Ordne die Begriffe ihren korrekten Definitionen zu.</p>
+            <div class="solution">
+                <p><strong>🎯 Musterlösung:</strong></p>
+                <ul style="margin: 12px 0 0 20px;">
+                    <li><strong>Datenbank</strong> ↔ Strukturierter Speicher für viele zusammenhängende Daten.</li>
+                    <li><strong>DBMS</strong> (Datenbankmanagementsystem) ↔ Software, die den Zugriff auf die Daten steuert und verwaltet.</li>
+                    <li><strong>DBS</strong> (Datenbanksystem) ↔ Kombination aus Datenbank und DBMS.</li>
+                    <li><strong>Datensatz</strong> ↔ Zusammengehörige Informationen zu einem Objekt.</li>
+                    <li><strong>Zugriffsrechte</strong> ↔ Regeln, wer Daten sehen oder ändern darf.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="entitaeten" class="card">
+            <h2 class="task-title">8. Aufgabe: Entitäten benennen</h2>
+            <p class="task-text">Benenne die Entitäten, die aus der Anforderungsanalyse entstehen.</p>
+            <div class="solution">
+                <p><strong>🎯 Lösung:</strong> SCHÜLER, KURS, LEHRER, NOTEN</p>
+            </div>
+
+            <h3>Attribute der Entitäten</h3>
+            <div class="solution">
+                <ul style="margin: 12px 0 0 20px;">
+                    <li><strong>SCHÜLER:</strong> <u>Matrikelnummer</u>, Name, Vorname, E-Mail</li>
+                    <li><strong>KURS:</strong> <u>Kursid</u>, Kursname, Klassenstufe, Raum</li>
+                    <li><strong>LEHRER:</strong> <u>Lehrerkürzel</u>, Name, Vorname, Fachbereich</li>
+                    <li><strong>NOTEN:</strong> <u>NotenID</u>, Note, Datum</li>
+                </ul>
+            </div>
+
+            <p class="note">Die unterstrichenen Attribute sind Schlüsselattribute. In ER-Diagrammen werden sie als Primärschlüssel gekennzeichnet.</p>
+        </section>
+
+        <section id="raum" class="card">
+            <h2 class="task-title">6. Aufgabe: Erweiterung des Modells mit RAUM</h2>
+            <p class="task-text">Erkläre, warum RAUM eine eigene Entität ist, welche Beziehungsart besteht und welche Attribute sie hat.</p>
+            <div class="solution">
+                <p><strong>a) Warum ist RAUM eine separate Entität?</strong></p>
+                <p>RAUM ist eine eigene Entität, weil er eigene Eigenschaften besitzt (Raumnummer, Kapazität, Ausstattung), die unabhängig von Kursen verwaltet werden müssen. Ein Raum kann für mehrere Kurse genutzt werden, daher darf er nicht einfach ein Attribut von KURS sein.</p>
+            </div>
+            <div class="solution">
+                <p><strong>b) Beziehungsart zwischen KURS und RAUM:</strong></p>
+                <p>Die Beziehung ist <strong>1:N</strong>. Ein Raum kann für mehrere Kurse verwendet werden, aber jeder Kurs findet in genau einem Raum statt.</p>
+            </div>
+            <div class="solution">
+                <p><strong>c) Attribute der Entität RAUM:</strong></p>
+                <ul style="margin: 12px 0 0 20px;">
+                    <li><u>Raumnummer</u> (Primärschlüssel)</li>
+                    <li>Gebäude</li>
+                    <li>Kapazität</li>
+                    <li>Ausstattung (z. B. Beamer, Tafel, Computer)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="fitnessstudio" class="card">
+            <h2 class="task-title">7. Modellaufgabe: Fitnessstudio-Verwaltung</h2>
+            <p class="task-text">Entwirf ein ER-Modell für ein Fitnessstudio mit Mitgliedern und Kursen.</p>
+
+            <div class="solution">
+                <p><strong>🎯 Schritt 1: Entitäten</strong></p>
+                <p>Benötigte Entitäten: <strong>MITGLIED</strong>, <strong>KURS</strong></p>
+            </div>
+            <div class="solution">
+                <p><strong>🎯 Schritt 2: Attribute</strong></p>
+                <ul style="margin: 12px 0 0 20px;">
+                    <li><strong>MITGLIED:</strong> <u>Mitgliedsnummer</u>, Name, Geburtsdatum, E-Mail</li>
+                    <li><strong>KURS:</strong> <u>Kurs-ID</u>, Bezeichnung, Maximal-Teilnehmerzahl, Trainername</li>
+                </ul>
+            </div>
+            <div class="solution">
+                <p><strong>🎯 Schritt 3: Beziehung</strong></p>
+                <ul style="margin: 12px 0 0 20px;">
+                    <li><strong>Beziehungsname:</strong> ANMELDUNG (oder: nimmt_teil_an, besucht)</li>
+                    <li><strong>Kardinalität:</strong> <strong>M:N</strong> (Viele-zu-Viele)</li>
+                    <li><strong>Begründung:</strong> Ein Mitglied kann sich für mehrere Kurse anmelden (z. B. Anna meldet sich für Yoga UND Pump an). Ein Kurs hat viele Mitglieder (z. B. der Yoga-Kurs hat 30 Mitglieder).</li>
+                </ul>
+            </div>
+
+            <div class="solution">
+                <p><strong>🎯 Schritt 4: ER-Diagramm</strong></p>
+                <p>Zeichne ein ER-Diagramm mit den Entitäten MITGLIED und KURS sowie der M:N-Beziehung ANMELDUNG.</p>
+            </div>
+
+            <div class="image-container">
+                <img src="images/resources/unnamed(4).png" alt="Musterlösung: ER-Modell Fitnessstudio">
+            </div>
+            <p class="small">Das Bild zeigt die Musterlösung des ER-Diagramms für die Fitnessstudio-Aufgabe.</p>
+        </section>
+
+        <section id="uebungsaufgaben" class="card">
+            <h2 class="task-title">8. Übungsaufgaben</h2>
+            <p class="task-text">Erstelle für diese Szenarien vollständige ER-Diagramme. (Im Modul sind dazu keine direkten Musterlösungen enthalten.)</p>
+            <div class="solution">
+                <p><strong>Aufgabe 1:</strong> Schulbibliothek-System</p>
+                <p>Entitäten könnten sein: BUCH, SCHÜLER, AUSLEIHE, LEHRER, KATEGORIE.</p>
+            </div>
+            <div class="solution">
+                <p><strong>Aufgabe 2:</strong> Kino-Ticketing-System</p>
+                <p>Entitäten könnten sein: FILM, VORFÜHRUNG, KINO, SITZ, TICKET, KUNDE.</p>
+            </div>
+            <div class="solution">
+                <p><strong>Aufgabe 3:</strong> Online-Shop mit Bestellmanagement</p>
+                <p>Entitäten könnten sein: PRODUKT, BESTELLUNG, KUNDE, ARTIKELZEILE, LIEFERUNG.</p>
+            </div>
+            <p class="note">Die Übungsaufgaben sind als offene Modellierungsaufgaben gedacht. Nutze die Beispiele oben als Orientierung.</p>
+        </section>
+
+        <a class="back-link" href="index.html">Zurück zum Lernmodul</a>
+    </div>
+
+    <script>
+        function printPage() {
+            window.print();
+        }
+    </script>
+</body>
+</html>

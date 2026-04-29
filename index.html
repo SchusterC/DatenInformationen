@@ -700,6 +700,71 @@
         .nav-submenu .nav-item a:hover {
             opacity: 1;
         }
+
+        @media print {
+            body {
+                background: white !important;
+                color: #000 !important;
+            }
+
+            .sidebar,
+            .nav-link,
+            .btn,
+            .btn-submit,
+            .nav-submenu,
+            .feedback,
+            .modal,
+            .modal-close,
+            .quiz-option input,
+            .image-caption {
+                display: none !important;
+            }
+
+            .content-area {
+                overflow: visible !important;
+                padding: 0 !important;
+            }
+
+            .page-content {
+                background: white !important;
+                border: none !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                max-width: 100% !important;
+            }
+
+            .exercise-box,
+            .definition,
+            .quiz-option,
+            .page-content ul,
+            .page-content ol {
+                background: transparent !important;
+                border: 1px solid #000 !important;
+                color: #000 !important;
+            }
+
+            .text-input,
+            .gap-input {
+                background: white !important;
+                color: #000 !important;
+                border-color: #000 !important;
+            }
+
+            .page {
+                display: block !important;
+            }
+
+            a::after {
+                content: " (" attr(href) ")";
+                font-size: 90%;
+                color: #000;
+            }
+
+            @page {
+                size: A4;
+                margin: 20mm;
+            }
+        }
     </style>
 </head>
 <body>
